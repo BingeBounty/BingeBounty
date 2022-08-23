@@ -65,4 +65,6 @@ group :development do
 end
 
 gem "devise"
+gem "sassc-rails"
+gem "simple_form", github: "heartcombo/simple_form"
 
