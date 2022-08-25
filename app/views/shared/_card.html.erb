@@ -4,6 +4,8 @@
         <%= item.body[..256] %>...
     </span>
     <span class="author">
-        Author: <%= item.user.username %>
+        <span>
+            Author: <%= item.user.username %>
+        </span>
     </span>
 <% end %>

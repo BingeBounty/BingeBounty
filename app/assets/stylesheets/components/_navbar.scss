@@ -1,9 +1,11 @@
 @import "../config/colors";
 
 .navbar {
-    background-color: $light-gray;
+    padding: 10px 50px;
+    background-color: $dark-gray;
+    color: white;
     a {
+        color: white;
         text-decoration: none;
-        color: black;
     }
 }
