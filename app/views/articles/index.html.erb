@@ -1,7 +1,8 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<%= render "shared/banner" %>
 
-<%= link_to  "text", new_article_path %>
+<h1>Writeups</h1>
+
+<%= link_to "text", new_article_path, class: "btn btn-flat" %>
 
 <ul>
 <% @articles.each do |article| %>
