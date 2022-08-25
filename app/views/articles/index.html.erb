@@ -1,11 +1,14 @@
 <%= render "shared/banner" %>
 
-<h1>Writeups</h1>
 
-<%= link_to "text", new_article_path, class: "btn btn-flat" %>
+<div class="button-bar">
+    <h1>Writeups</h1>
+    <%= link_to "Add writeup", new_article_path, class: "btn btn-flat" %>
+</div>
 
-<ul>
-<% @articles.each do |article| %>
-    <li><%= article.title %></li>
-<% end %>
-</ul>
+
+<div class="cards">
+    <% @articles.each do |article| %>
+        <%= render "shared/card", item: article %>
+    <% end %>
+</div>

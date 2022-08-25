@@ -1,0 +1,34 @@
+@import "../config/colors";
+
+.cards {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    padding: 10px;
+    height: 256px;
+    margin: 10px;
+    border: 0px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.219);
+    .preview-text {
+        color: black;
+    }
+    .author {
+        color: $light-gray;
+    }
+    display: flex;
+    justify-content: space-between;
+}
+
+a.card {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}

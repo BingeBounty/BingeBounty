@@ -9,5 +9,16 @@
 Article.destroy_all
 User.destroy_all
 
-u = User.create(password: "81278371823awd", username: "98123u81298eu", email: "ihuawdu@adwawd.aaa")
-Article.create(user: u, title: "awiujdia", body: "ajwdiawdoijawdw")
+u = User.create(password: "test12345689", username: "test", email: "test@test.com")
+
+Article.create(user: u, title: "How css was weaponized", body: "
+    Did you know css is turning complete? Yes it is!
+    So having control over the css is basically an RCE. This was used in the iOS 0day to root smart apple fridges.")
+
+10.times do
+    body = ""
+    10.times do
+    body += Faker::Hacker.say_something_smart
+    end
+    Article.create(user: u, title: Faker::Hacker.noun + " " + Faker::Hacker.verb, body: body)
+end
